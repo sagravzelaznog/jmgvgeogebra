@@ -1,0 +1,3 @@
+# Archivos de entorno ignorados por seguridad
+env.js
+recursos/js/env.js

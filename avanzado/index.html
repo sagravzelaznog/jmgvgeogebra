@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Avanzado - Curso de GeoGebra</title>
+    <link rel="stylesheet" href="../recursos/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav aria-label="Navegación principal" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Curso GeoGebra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="nivelesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Niveles
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../basico/index.html">Básico</a></li>
+                            <li><a class="dropdown-item" href="../intermedio/index.html">Intermedio</a></li>
+                            <li><a class="dropdown-item active" href="index.html">Avanzado</a></li>
+                        </ul>
+                    </li>
+                
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light ms-2" onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">
+                            <i id="dark-mode-icon" class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4">Nivel Avanzado</h1>
+                    <p class="lead">Domina las funcionalidades más potentes de GeoGebra</p>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">66% Completado</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <img src="https://www.geogebra.org/resource/egfqff3v/1zVjQZQeW5DqS5Jw/material-egfqff3v.png" alt="GeoGebra Avanzado" class="img-fluid rounded" style="max-height: 150px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Contenido del Nivel</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#3d" class="list-group-item list-group-item-action active">Gráficos 3D</a>
+                        <a href="#scripting" class="list-group-item list-group-item-action">Scripting</a>
+                        <a href="#estadistica" class="list-group-item list-group-item-action">Estadística Avanzada</a>
+                        <a href="#ejercicios" class="list-group-item list-group-item-action">Proyectos Avanzados</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Recursos Avanzados</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="bi bi-box-arrow-up-right me-2"></i>Documentación API</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="bi bi-github me-2"></i>Ejemplos en GitHub</a></li>
+                            <li><a href="#" class="text-decoration-none"><i class="bi bi-people me-2"></i>Comunidad GeoGebra</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <section id="3d" class="mb-5">
+                    <h2>Gráficos 3D en GeoGebra</h2>
+                    <p>GeoGebra te permite crear y manipular objetos en tres dimensiones, abriendo un mundo de posibilidades para visualizar conceptos matemáticos complejos.</p>
+                    
+                    <h4 class="mt-4">Activando la Vista 3D</h4>
+                    <ol>
+                        <li>Ve al menú <strong>Vista</strong> > <strong>Vista 3D</strong></li>
+                        <li>O usa el atajo <kbd>Ctrl+Shift+3</kbd> (Windows/Linux) o <kbd>Cmd+Shift+3</kbd> (Mac)</li>
+                    </ol>
+
+                    <div class="card bg-light p-3 my-4">
+                        <h5>Ejemplo: Crear un Cono 3D</h5>
+                        <ol>
+                            <li>Abre la Vista 3D</li>
+                            <li>Selecciona la herramienta <strong>Cono</strong></li>
+                            <li>Haz clic para establecer el centro de la base</li>
+                            <li>Arrastra para definir el radio de la base</li>
+                            <li>Haz clic nuevamente para establecer la altura</li>
+                        </ol>
+                        <button class="btn btn-sm btn-primary mostrar-solucion">Ver Demostración</button>
+                        <div class="solucion mt-3">
+                            <div class="geogebra-container" id="cono-3d"></div>
+                        </div>
+                    </div>
+
+                    <h4>Navegación en 3D</h4>
+                    <ul>
+                        <li><strong>Rotar vista:</strong> Haz clic y arrastra con el botón izquierdo</li>
+                        <li><strong>Mover vista:</strong> Haz clic y arrastra con el botón derecho</li>
+                        <li><strong>Zoom:</strong> Usa la rueda del ratón o gesto de pellizco</li>
+                    </ul>
+                </section>
+
+                <section id="scripting" class="mb-5">
+                    <h2>Scripting en GeoGebra</h2>
+                    <p>El scripting te permite automatizar tareas y crear construcciones dinámicas más complejas.</p>
+                    
+                    <h4 class="mt-4">Tipos de Scripts</h4>
+                    <ul>
+                        <li><strong>Al hacer clic:</strong> Se ejecutan al hacer clic en un objeto</li>
+                        <li><strong>Al actualizar:</strong> Se ejecutan cuando cambia el valor de un objeto</li>
+                        <li><strong>Global JavaScript:</strong> Funciones reutilizables en toda la construcción</li>
+                    </ul>
+
+                    <div class="card bg-light p-3 my-4">
+                        <h5>Ejemplo: Animación con Script</h5>
+                        <p>Crea una animación que haga girar un polígono regular.</p>
+                        <ol>
+                            <li>Crea un deslizador 'ángulo' de 0° a 360°</li>
+                            <li>Crea un polígono regular</li>
+                            <li>Haz clic derecho en el deslizador > Propiedades > Scripting</li>
+                            <li>En 'Al actualizar', escribe: <code>Gira(pol1, ángulo, A)</code> (donde A es el centro de rotación)</li>
+                            <li>Activa la animación del deslizador</li>
+                        </ol>
+                        <button class="btn btn-sm btn-primary mostrar-solucion">Ver Código</button>
+                        <div class="solucion mt-3">
+                            <pre><code>// Script de animación
+function onUpdate() {
+    // Obtener el valor actual del ángulo
+    var angulo = getValue('ángulo');
+    // Rotar el polígono
+    ggbApplet.evalCommand('Gira(pol1, ' + angulo + ', A)');
+}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="estadistica" class="mb-5">
+                    <h2>Estadística Avanzada</h2>
+                    <p>GeoGebra incluye potentes herramientas para análisis estadístico avanzado.</p>
+                    
+                    <h4 class="mt-4">Distribuciones de Probabilidad</h4>
+                    <p>Puedes trabajar con diversas distribuciones de probabilidad:</p>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Distribución</th>
+                                    <th>Sintaxis</th>
+                                    <th>Ejemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Normal</td>
+                                    <td><code>Normal(μ, σ, x)</code></td>
+                                    <td><code>Normal(0, 1, x)</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Binomial</td>
+                                    <td><code>Binomial(n, p, k)</code></td>
+                                    <td><code>Binomial(10, 0.5, 3)</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Poisson</td>
+                                    <td><code>Poisson(λ, k)</code></td>
+                                    <td><code>Poisson(5, 3)</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card bg-light p-3 my-4">
+                        <h5>Ejemplo: Ajuste de Curvas</h5>
+                        <p>Ajusta una curva a un conjunto de datos.</p>
+                        <ol>
+                            <li>Ingresa los datos en la hoja de cálculo (Vista > Hoja de Cálculo)</li>
+                            <li>Selecciona las celdas con los datos</li>
+                            <li>Haz clic en el menú Análisis > Ajuste de Curva</li>
+                            <li>Selecciona el tipo de función (lineal, polinómica, exponencial, etc.)</li>
+                            <li>Haz clic en Aceptar</li>
+                        </ol>
+                        <button class="btn btn-sm btn-primary mostrar-solucion">Ver Ejemplo</button>
+                        <div class="solucion mt-3">
+                            <div class="geogebra-container" id="ajuste-curva"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="ejercicios" class="mb-5">
+                    <h2>Proyectos Avanzados</h2>
+                    <p>Pon a prueba tus habilidades con estos proyectos desafiantes.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Proyecto 1: Superficie Paramétrica</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Crea una superficie paramétrica en 3D, como un toro o una esfera.</p>
+                            <button class="btn btn-sm btn-primary mostrar-solucion">Ver Solución</button>
+                            <div class="solucion mt-3">
+                                <p>Para crear un toro:</p>
+                                <pre><code>Superficie(
+    (4 + cos(u)) * cos(v),
+    (4 + cos(u)) * sin(v),
+    sin(u),
+    u, 0, 2π,
+    v, 0, 2π
+)</code></pre>
+                                <p>Ajusta los parámetros para modificar el tamaño y la forma del toro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Proyecto 2: Simulación Física</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Crea una simulación de un péndulo simple con amortiguación.</p>
+                            <button class="btn btn-sm btn-primary mostrar-solucion">Ver Solución</button>
+                            <div class="solucion mt-3">
+                                <ol>
+                                    <li>Crea un punto A como punto de anclaje</li>
+                                    <li>Crea un punto B que represente la masa</li>
+                                    <li>Usa un deslizador para el ángulo inicial</li>
+                                    <li>Crea un segmento entre A y B</li>
+                                    <li>Usa un script para simular el movimiento del péndulo</li>
+                                </ol>
+                                <p>Fórmula del péndulo amortiguado:</p>
+                                <pre><code>θ''(t) = -g/L * sin(θ) - b/m * θ'</code></pre>
+                                <p>Donde g es la gravedad, L es la longitud, b es el coeficiente de amortiguación, y m es la masa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <!-- Sección de Evaluación (Quiz Kahoot) -->
+                <section class="quiz-section mt-5 border-top pt-5" id="evaluacion">
+                    <h2 class="text-primary"><i class="bi bi-controller"></i> Evaluación de Nivel</h2>
+                    <p class="lead">¡Demuestra tus habilidades de GeoGebra! Responde el siguiente quiz interactivo para obtener tu certificado.</p>
+                    
+                    <div id="quiz-container" class="quiz-container">
+                        <div id="question-header" class="question-header">
+                            <span id="question-counter" class="badge bg-primary text-white">Pregunta 1 de 5</span>
+                        </div>
+                        <h3 id="question-text">Cargando pregunta...</h3>
+                        
+                        <div id="answer-buttons" class="btn-grid">
+                            <!-- Botones dinámicos -->
+                        </div>
+                        
+                        <div id="score-container" class="is-hidden">
+                            <h3 id="final-score"></h3>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="../intermedio/index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left me-1"></i> Nivel Intermedio</a>
+                    <a href="#" class="btn btn-outline-secondary disabled">Siguiente <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© 2025 Curso de GeoGebra - Nivel Avanzado</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de Firebase y Auth -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="../recursos/js/env.js"></script>
+    <script src="../recursos/js/firebase-config.js"></script>
+    <script src="../recursos/js/auth.js"></script>
+
+    
+    <!-- Librerías para Generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    
+    <!-- Archivos del Quiz interactivo -->
+    <script>window.CURRENT_SESSION = 'avanzado';</script>
+    <script src="../recursos/js/quizData.js"></script>
+    <script src="../recursos/js/quiz.js"></script>
+
+    <script src="../recursos/js/main.js"></script>
+</body>
+</html>

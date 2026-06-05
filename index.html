@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de GeoGebra</title>
+    <link rel="stylesheet" href="recursos/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav aria-label="Navegación principal" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Curso GeoGebra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="nivelesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Niveles
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="basico/index.html">Básico</a></li>
+                            <li><a class="dropdown-item" href="intermedio/index.html">Intermedio</a></li>
+                            <li><a class="dropdown-item" href="avanzado/index.html">Avanzado</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recursos">Recursos</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light ms-2" onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">
+                            <i id="dark-mode-icon" class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Curso Completo de GeoGebra</h1>
+            <p class="lead">Aprende desde cero hasta nivel experto con ejercicios prácticos y ejemplos interactivos</p>
+            <a href="#comenzar" class="btn btn-primary btn-lg">Comenzar Ahora</a>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="niveles" class="mb-5">
+            <h2 class="text-center mb-4">Niveles de Aprendizaje</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Nivel Básico</h3>
+                            <p class="card-text">Domina los conceptos fundamentales de GeoGebra, creación de gráficos 2D y resolución de ecuaciones básicas.</p>
+                            <a href="basico/index.html" class="btn btn-outline-primary">Empezar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Nivel Intermedio</h3>
+                            <p class="card-text">Aprende sobre derivadas, integrales y transformaciones con deslizadores.</p>
+                            <a href="intermedio/index.html" class="btn btn-outline-primary">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Nivel Avanzado</h3>
+                            <p class="card-text">Domina gráficos 3D, estadística y construcciones avanzadas.</p>
+                            <a href="avanzado/index.html" class="btn btn-outline-primary">Avanzar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="mb-5">
+            <h2 class="text-center mb-4">Características del Curso</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="text-center p-3 border rounded h-100">
+                        <i class="bi bi-laptop fs-1 text-primary"></i>
+                        <h4>Aprendizaje Interactivo</h4>
+                        <p>Ejercicios prácticos con retroalimentación inmediata.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="text-center p-3 border rounded h-100">
+                        <i class="bi bi-people fs-1 text-primary"></i>
+                        <h4>Para Todos los Niveles</h4>
+                        <p>Contenido estructurado desde principiante hasta avanzado.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="text-center p-3 border rounded h-100">
+                        <i class="bi bi-file-earmark-text fs-1 text-primary"></i>
+                        <h4>Recursos Descargables</h4>
+                        <p>Archivos .ggb, guías y material de apoyo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="text-center p-3 border rounded h-100">
+                        <i class="bi bi-phone fs-1 text-primary"></i>
+                        <h4>Acceso Móvil</h4>
+                        <p>Diseño responsive que se adapta a cualquier dispositivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© 2025 Curso de GeoGebra. Todos los derechos reservados.</p>
+            <div class="mt-2">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"></script>
+    
+    <!-- Librerías de Firebase y Auth -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="recursos/js/env.js"></script>
+    <script src="recursos/js/firebase-config.js"></script>
+    <script src="recursos/js/auth.js"></script>
+
+    <script src="recursos/js/main.js"></script>
+</body>
+</html>

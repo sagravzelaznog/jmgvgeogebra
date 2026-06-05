@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Básico - Curso de GeoGebra</title>
+    <link rel="stylesheet" href="../recursos/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav aria-label="Navegación principal" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Curso GeoGebra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="nivelesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Niveles
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="index.html">Básico</a></li>
+                            <li><a class="dropdown-item" href="../intermedio/index.html">Intermedio</a></li>
+                            <li><a class="dropdown-item" href="../avanzado/index.html">Avanzado</a></li>
+                        </ul>
+                    </li>
+                
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light ms-2" onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">
+                            <i id="dark-mode-icon" class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4">Nivel Básico</h1>
+                    <p class="lead">Aprende los conceptos fundamentales de GeoGebra desde cero</p>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0% Completado</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <img src="https://www.geogebra.org/resource/egfqff3v/1zVjQZQeW5DqS5Jw/material-egfqff3v.png" alt="GeoGebra Básico" class="img-fluid rounded" style="max-height: 150px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Contenido del Nivel</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#introduccion" class="list-group-item list-group-item-action active">Introducción a GeoGebra</a>
+                        <a href="#interfaz" class="list-group-item list-group-item-action">La Interfaz de Usuario</a>
+                        <a href="#herramientas-basicas" class="list-group-item list-group-item-action">Herramientas Básicas</a>
+                        <a href="#graficos-2d" class="list-group-item list-group-item-action">Gráficos 2D</a>
+                        <a href="#ejercicios" class="list-group-item list-group-item-action">Ejercicios Prácticos</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Recursos Adicionales</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="bi bi-file-earmark-pdf me-2"></i>Guía de Referencia Rápida</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="bi bi-youtube me-2"></i>Videotutoriales</a></li>
+                            <li><a href="#" class="text-decoration-none"><i class="bi bi-download me-2"></i>Descargar Archivos .ggb</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <section id="introduccion" class="mb-5">
+                    <h2>Introducción a GeoGebra</h2>
+                    <p>GeoGebra es un software de matemáticas dinámicas que combina geometría, álgebra, cálculo, estadística y probabilidad en un solo paquete fácil de usar. En este nivel básico, aprenderás los fundamentos para comenzar a trabajar con esta poderosa herramienta.</p>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        <strong>¿Sabías que?</strong> GeoGebra es utilizado por millones de estudiantes y profesores en todo el mundo para aprender y enseñar matemáticas de manera interactiva.
+                    </div>
+
+                    <h4 class="mt-4">¿Qué aprenderás en este nivel?</h4>
+                    <ul>
+                        <li>Conocer la interfaz de GeoGebra</li>
+                        <li>Usar herramientas básicas de dibujo</li>
+                        <li>Crear y manipular objetos geométricos</li>
+                        <li>Graficar funciones básicas</li>
+                        <li>Guardar y compartir tus creaciones</li>
+                    </ul>
+                </section>
+
+                <section id="interfaz" class="mb-5">
+                    <h2>La Interfaz de Usuario</h2>
+                    <p>La interfaz de GeoGebra está organizada en diferentes áreas que te permiten interactuar con los objetos matemáticos de manera intuitiva.</p>
+                    
+                    <div class="text-center my-4">
+                        <img src="https://www.geogebra.org/resource/egfqff3v/1zVjQZQeW5DqS5Jw/material-egfqff3v.png" alt="Interfaz de GeoGebra" class="img-fluid rounded border">
+                        <p class="text-muted mt-2">Figura 1: Interfaz principal de GeoGebra</p>
+                    </div>
+
+                    <h4>Componentes principales:</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">1. Barra de Herramientas</h5>
+                                    <p class="card-text">Contiene las herramientas para crear y modificar objetos geométricos, funciones y más.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">2. Vista Gráfica</h5>
+                                    <p class="card-text">Área donde se muestran los objetos gráficos que vas creando.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">3. Vista Algebraica</h5>
+                                    <p class="card-text">Muestra las coordenadas y ecuaciones de los objetos en la vista gráfica.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">4. Barra de Entrada</h5>
+                                    <p class="card-text">Permite introducir comandos y ecuaciones directamente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="herramientas-basicas" class="mb-5">
+                    <h2>Herramientas Básicas</h2>
+                    <p>GeoGebra ofrece una variedad de herramientas para crear construcciones geométricas. Vamos a explorar las más importantes.</p>
+                    
+                    <h4 class="mt-4">1. Herramienta Punto</h4>
+                    <p>Permite colocar puntos en la vista gráfica. Puedes hacer clic en cualquier lugar para crear un punto.</p>
+                    
+                    <div class="alert alert-warning">
+                        <i class="bi bi-lightbulb-fill me-2"></i>
+                        <strong>Consejo:</strong> Mantén presionada la tecla <kbd>Ctrl</kbd> mientras mueves un punto para que solo se mueva horizontal o verticalmente.
+                    </div>
+
+                    <h4 class="mt-4">2. Herramienta Recta</h4>
+                    <p>Permite dibujar rectas de diferentes maneras:</p>
+                    <ul>
+                        <li><strong>Recta:</strong> Dibuja una recta que pasa por dos puntos.</li>
+                        <li><strong>Semirrecta:</strong> Dibuja una semirrecta desde un punto de inicio.</li>
+                        <li><strong>Segmento:</strong> Dibuja un segmento entre dos puntos.</li>
+                    </ul>
+
+                    <h4 class="mt-4">3. Herramienta Polígono</h4>
+                    <p>Permite crear polígonos haciendo clic en los vértices. Para terminar, haz clic en el primer punto o presiona <kbd>Enter</kbd>.</p>
+
+                    <div class="card bg-light p-3 my-4">
+                        <h5>Ejemplo Práctico: Crear un Triángulo</h5>
+                        <ol>
+                            <li>Selecciona la herramienta <strong>Punto</strong> y haz clic en tres lugares diferentes para crear tres puntos.</li>
+                            <li>Selecciona la herramienta <strong>Polígono</strong>.</li>
+                            <li>Haz clic en los tres puntos en orden y luego vuelve a hacer clic en el primer punto para cerrar el triángulo.</li>
+                        </ol>
+                        <button class="btn btn-sm btn-outline-primary">Ver Solución</button>
+                    </div>
+                </section>
+
+                <section id="graficos-2d" class="mb-5">
+                    <h2>Gráficos 2D</h2>
+                    <p>GeoGebra te permite graficar funciones y relaciones matemáticas de manera sencilla.</p>
+                    
+                    <h4 class="mt-4">Graficar una Función</h4>
+                    <p>Para graficar una función, puedes usar la barra de entrada en la parte inferior de la ventana.</p>
+                    
+                    <div class="card bg-light p-3 my-4">
+                        <h5>Ejemplo: Graficar y = x²</h5>
+                        <ol>
+                            <li>Haz clic en la barra de entrada en la parte inferior.</li>
+                            <li>Escribe: <code>y = x^2</code></li>
+                            <li>Presiona <kbd>Enter</kbd></li>
+                        </ol>
+                        <p>Verás que se dibuja una parábola en la vista gráfica.</p>
+                    </div>
+
+                    <h4 class="mt-4">Personalizar Gráficos</h4>
+                    <p>Puedes personalizar la apariencia de tus gráficos:</p>
+                    <ul>
+                        <li><strong>Cambiar color:</strong> Haz clic derecho en el objeto y selecciona <em>Propiedades</em> > <em>Estilo</em>.</li>
+                        <li><strong>Cambiar grosor:</strong> En la pestaña de propiedades, ajusta el grosor de la línea.</li>
+                        <li><strong>Etiquetas:</strong> Activa/desactiva etiquetas desde las propiedades.</li>
+                    </ul>
+                </section>
+
+                <section id="ejercicios" class="mb-5">
+                    <h2>Ejercicios Prácticos</h2>
+                    <p>Practica lo aprendido con estos ejercicios. Intenta resolverlos por tu cuenta antes de ver la solución.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Ejercicio 1: Construir un Cuadrado</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Crea un cuadrado usando la herramienta de polígono regular.</p>
+                            <button class="btn btn-sm btn-primary mostrar-solucion">Mostrar solución</button>
+                            <div class="solucion mt-3">
+                                <ol>
+                                    <li>Selecciona la herramienta <strong>Polígono regular</strong>.</li>
+                                    <li>Haz clic en dos puntos para definir un lado del cuadrado.</li>
+                                    <li>En el cuadro de diálogo que aparece, ingresa 4 como número de lados.</li>
+                                    <li>Haz clic en <em>Aceptar</em>.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Ejercicio 2: Graficar Funciones</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Grafica las siguientes funciones en el mismo sistema de coordenadas:</p>
+                            <ul>
+                                <li>y = 2x + 1</li>
+                                <li>y = -x + 3</li>
+                            </ul>
+                            <p>Encuentra el punto de intersección.</p>
+                            <button class="btn btn-sm btn-primary mostrar-solucion">Mostrar solución</button>
+                            <div class="solucion mt-3">
+                                <ol>
+                                    <li>En la barra de entrada, escribe: <code>y = 2x + 1</code> y presiona <kbd>Enter</kbd>.</li>
+                                    <li>Luego escribe: <code>y = -x + 3</code> y presiona <kbd>Enter</kbd>.</li>
+                                    <li>Usa la herramienta <strong>Intersección</strong> y haz clic en las dos rectas.</li>
+                                    <li>El punto de intersección se mostrará en la vista gráfica y algebraica.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <!-- Sección de Evaluación (Quiz Kahoot) -->
+                <section class="quiz-section mt-5 border-top pt-5" id="evaluacion">
+                    <h2 class="text-primary"><i class="bi bi-controller"></i> Evaluación de Nivel</h2>
+                    <p class="lead">¡Demuestra tus habilidades de GeoGebra! Responde el siguiente quiz interactivo para obtener tu certificado.</p>
+                    
+                    <div id="quiz-container" class="quiz-container">
+                        <div id="question-header" class="question-header">
+                            <span id="question-counter" class="badge bg-primary text-white">Pregunta 1 de 5</span>
+                        </div>
+                        <h3 id="question-text">Cargando pregunta...</h3>
+                        
+                        <div id="answer-buttons" class="btn-grid">
+                            <!-- Botones dinámicos -->
+                        </div>
+                        
+                        <div id="score-container" class="is-hidden">
+                            <h3 id="final-score"></h3>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="#" class="btn btn-outline-secondary disabled"><i class="bi bi-arrow-left me-1"></i> Anterior</a>
+                    <a href="../intermedio/index.html" class="btn btn-primary">Nivel Intermedio <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© 2025 Curso de GeoGebra - Nivel Básico</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de Firebase y Auth -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="../recursos/js/env.js"></script>
+    <script src="../recursos/js/firebase-config.js"></script>
+    <script src="../recursos/js/auth.js"></script>
+
+    
+    <!-- Librerías para Generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    
+    <!-- Archivos del Quiz interactivo -->
+    <script>window.CURRENT_SESSION = 'basico';</script>
+    <script src="../recursos/js/quizData.js"></script>
+    <script src="../recursos/js/quiz.js"></script>
+
+    <script src="../recursos/js/main.js"></script>
+</body>
+</html>
